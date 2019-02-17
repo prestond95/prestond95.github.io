@@ -1,0 +1,206 @@
+/* Selects everything, lets you zero everything out */
+*{
+}
+
+body {
+background-color: #f4f4f4;
+color: #555555;
+
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+font-weight: normal;
+
+/* Three above lines condensed into one */
+font: normal 16px Arial, Helvetica, sans-serif;
+
+line-height: 1.2em;
+}
+
+a { /* Applies to all links on the page */
+  text-decoration: none; /* removes the underline */
+  color: #000;
+}
+
+a:hover { /* Hover state of links */
+  color: red;
+}
+
+a:active { /* Actively pressed */
+  color: green;
+}
+
+a:visited {
+  color: purple;
+}
+
+
+.container {
+  width: 90%; /* Percent changes with window size, unlike pixels */
+  margin:auto; /* Sets equal spacing on both sides */
+}
+
+/* Evoke box1 */
+.box1 {
+background-color: #333; /* same as #333333 */
+color: #fff;
+
+border: 5px red solid;
+border-width: 3px;
+border-bottom-width: 10px;
+border-top-style: dashed;
+
+padding: 20px;
+
+margin: 20px 0;
+}
+
+.box1 h1 { /* Only effects h1 in box1 */
+  font-family: Tahoma;
+  font-weight: 800;
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  word-spacing: 0.3em;
+}
+
+.box2 {
+  border:3px dotted #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.categories {
+  border: 1px #ccc solid;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.categories h2 {
+  text-align: center;
+}
+
+.categories ul {
+  padding-left: 30px;
+  list-style: none; /* Square bullets */
+}
+
+.categories li {
+  padding-bottom: 8px;
+  border-bottom: dotted 1px #333;
+  list-style-image: url("../images/check.jpg");
+}
+
+.myForm {
+  padding: 20px;
+}
+.myForm .form-group {
+  padding-bottom: 15px;
+}
+.myForm label {
+  display: block; /* Display as block elements to put them on new lines*/
+}
+.myForm input[type="text"], .myForm textarea { /* Only does "text" types */
+  padding: 8px;
+  width: 100%;
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.button:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.block {
+  float: left;
+  width: 33.3%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  /* Applies padding and border to box so it doesn't add pixels after fitting the boxes to 33.3% */
+}
+
+/* Clear floats and stuff */
+.clr {
+  clear:both;
+}
+
+#mainBlock { /* Call ID's with # instead of . */
+  float:left;
+  width: 70%;
+}
+
+#sidebar {
+  float: right;
+  width: 30%;
+  background-color: #333;
+  color:#fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.pBox {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #000;
+  margin-top: 30px;
+  position:relative;
+  background-image: url("../images/coralBackground.png");
+  background-position: 100px 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pBox h1 {
+  /* color: blue; */
+  left: 200px;
+  position: absolute;
+  top: 90px;
+  /* Puts the header at the absolute value of 90 px from the top of the page */
+  /* When position is relative in pBox, it is 90px from the top of the box */
+}
+
+.pBox h2 {
+  position: absolute; /* Absolute position within pBox (which is relative) */
+  bottom: 90px;
+  right: 200px;
+}
+
+.fixMe {
+  position: fixed;
+  top: 400px;
+}
+
+.myList li:nth-child(even) {
+  background: gray;
+}
+.myList li:nth-child(odd) {
+  background: violet;
+}
+.myList li:first-child {
+  background: red;
+}
+.myList li:last-child {
+  background: blue;
+}
+.myList li:nth-child(5) {
+  background: yellow;
+}
+
+/* Margin and Padding Shorthand */
+/* p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+Same as
+p {margin: 5px 10px 5px 10px (Top right bottom left)}
+Same as
+p {margin: 5px 10px;} */

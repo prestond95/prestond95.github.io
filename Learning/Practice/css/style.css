@@ -1,0 +1,30 @@
+body {
+  background-attachment: fixed;
+  background-image: url("../Images/SpaceBackground.jpg");
+  color: #fff;
+  font-family: Verdana;
+  font-size: 24px;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  overflow: hidden;
+  width: 80%;
+}
+
+#main-header {
+  margin-top: 400px;
+  margin-bottom: 400px;
+  padding: 0;
+  border: 0;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  /* position: -webkit-sticky; */
+  position: sticky;
+  top: 0;
+  background-color: #222;
+}

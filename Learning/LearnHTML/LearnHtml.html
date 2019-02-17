@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!-- Links to CSS and JS files -->
+  <meta charset="utf-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <h1>Header 1</h1>
+  <h2>Header 2</h2>
+  <h3>Header 3</h3>
+  <h4>Header 4</h4>
+  <h5>Header 5</h5>
+  <h6>Header 6</h6>
+
+  <p>Paragraph 1</p>
+  <p>Lorem ipsum <strong>dolor sit</strong> amet, <em>consectetur</em>
+    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+    qui officia deserunt mollit anim id est laborum.</p>
+    <p>This is a <a href="http://google.com" target="_blank">link</a> </p>
+
+    <!-- <a href> is a link, target-"_blank" opens it in a new tab -->
+
+    <!-- Inline elements: Do not start on a new line, take only the necessary width -->
+    <!-- Examples: <span>, <img>, <a>, <strong>, <em> -->
+
+    <!-- Block elements: start on a new line, take the full available width -->
+    <!-- Examples: <div>, <h1>-<h6>, <p>, <form> -->
+
+    <!-- Tag attributes: <tagname attributename="attributevalue">content</tagname> -->
+
+    <h1 title="Message">Hover Over</h1>
+
+    <!-- title displays a message when hovered over -->
+
+    <!-- Lists -->
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ul>
+
+    <ol>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ol>
+
+    <!-- Tables -->
+    <table>
+      <thead>
+        <tr> <!-- table row -->
+          <th>Column 1</th> <!-- table header -->
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Entry 1</td> <!-- table data -->
+          <td>Entry 2</td>
+          <td>Entry 3</td>
+        </tr>
+        <tr>
+          <td>Entry 4</td> <!-- table data -->
+          <td>Entry 5</td>
+          <td>Entry 6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br> <!-- line break -->
+    <hr> <!-- horizontal rule (line across page) -->
+    <br>
+
+    <!-- Forms -->
+    <form action="index.html" method="post">
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter Name">
+      </div>
+      <!-- Labels and inputs are both inline -->
+      <!-- div is a block level element, so it puts the labels and inputs on separate lines -->
+      <br>
+      <div>
+        <label>Email</label>
+        <input type="email" name="email">
+      </div>
+      <!-- input type email automatically validates whether the entry is email format -->
+      <br>
+      <div>
+        <label>Message</label>
+        <textarea name="Message"></textarea>
+      </div>
+      <!-- Textarea provides an area to enter a message -->
+      <br>
+      <div>
+        <label for="">Gender</label>
+        <select name="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label>Age</label>
+        <input type="number" name="age" value="30">
+      </div>
+      <!-- Value provides initial condition -->
+      <!-- Placeholder provides initial condition which disappears when you click it -->
+      <br>
+      <div>
+        <label>Birthday</label>
+        <input type="date" name="birthday">
+      </div>
+      <br>
+      <input type="submit" name="submit" value="Submit">
+      <!-- Type submit is a button labeled with its given value -->
+    </form>
+
+    <br>
+
+    <!-- Buttons (outside of forms) -->
+    <button>Button</button>
+
+    <br>
+    <br>
+
+    <!-- Images -->
+    <div>
+      <img src="falcon.jpg" alt="My Sample Image" width="500">
+      <!-- alt is the sample it displays if the image isn't found -->
+    </div>
+    <br>
+    <div>
+      <a href="https://www.youtube.com/" target="_blank">
+        <img src="youtube.png" alt="Youtube">
+      </a>
+    </div>
+
+    <!-- Quotations -->
+    <blockquote cite="https://www.wikipedia.org">
+      Pseudoryzomys is a rodent from south-central South America in the family
+      Cricetidae. Found in lowland palm savanna and thorn scrub habitats, it is
+      a medium-sized rat, weighing about 50 grams (1.8 oz). It has gray-brown
+      fur, long and narrow hindfeet with small membranes between the toes, and
+      a tail that is about as long as the head and body.
+    </blockquote>
+
+    <p>The <abbr title="United States of America">USA</abbr> is alright.</p>
+
+    <p>Pseudoryzomys is a <cite>rodent</cite> from south-central South America in the family
+      Cricetidae.</p>
+
+    <!-- Cite tag italicizes to let you know that the selection is being cited -->
+
+    <!-- HTML Semantic Tags -->
+
+    <p>header, footer, aside, main, article, nav, section, details</p>
+
+    <br>
+
+    <img src="semanticTags.png" alt="Oops!">
+
+    </body>
+
+    <footer>
+      <p><a href="example.html">Go to Example Website</a></p>
+    </footer>
+
+    </html>
