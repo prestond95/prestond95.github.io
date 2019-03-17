@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>JS Practice</title>
+</head>
+<body>
+  <h2>Random Number Array Generator (1-10)</h2>
+  <div class="">
+    <span>Enter number of elements: </span>
+    <input type="number" id="elements">
+  </div>
+  <span>Array: </span>
+  <span id="array"></span>
+
+  <div>
+    <span>New Array: </span>
+    <span id="newArray"></span>
+  </div>
+
+  <div>
+    <button type="button" onclick="generate()" id="arrayButton">Generate Random Array</button>
+  </div>
+
+  <div>
+    <button type="button" onclick="generatePlot()" id="plotButton">Generate Plot</button>
+  </div>
+
+  <div>
+    <span id="plot"></span>
+  </div>
+
+
+  <script type="text/javascript">
+
+  document.getElementById("plotButton").disabled = true;
+  var numbers = [];
+  var numbers2 = [];
+
+
+  function generate() {
+    numbers = [];
+    numbers2 = [];
+    var numElements = document.getElementById("elements").value;
+    for (var i = 0; i < numElements; i++) {
+      numbers.push(Math.floor((Math.random() * 10) + 1));
+    }
+    for (var i = 1; i < 11; i++) {
+      numbers2.push(getOccurrence(numbers,i));
+    }
+    document.getElementById("array").innerHTML = numbers;
+    document.getElementById("newArray").innerHTML = numbers2;
+    document.getElementById("plotButton").disabled = false;
+  }
+
+  function getOccurrence(array, value) {
+    return array.filter((v) => (v === value)).length;
+  }
+
+  function generatePlot() {
+    var plotString = "";
+    for (var i = 0; i < numbers2.length; i++) {
+      plotString += "Value " + (i+1) + ": ";
+
+      for(var j = 0; j<numbers2[i]; j++) {
+        plotString += "* ";
+      }
+
+      plotString += "<br>"
+    }
+
+    document.getElementById("plot").innerHTML = plotString;
+  }
+
+</script>
+
+</body>
+</html>
