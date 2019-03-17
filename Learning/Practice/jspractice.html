@@ -8,35 +8,25 @@
   <h2>Random Number Array Generator (1-10)</h2>
   <div class="">
     <span>Enter number of elements: </span>
-    <input type="number" id="elements">
-  </div>
-  <span>Array: </span>
-  <span id="array"></span>
-
-  <div>
-    <span>New Array: </span>
-    <span id="newArray"></span>
+    <input type="number" id="elements" value=300>
   </div>
 
   <div>
-    <button type="button" onclick="generate()" id="arrayButton">Generate Random Array</button>
+    <button type="button" onclick="generate()" id="arrayButton">Generate Random Numbers</button>
   </div>
 
-  <div>
-    <button type="button" onclick="generatePlot()" id="plotButton">Generate Plot</button>
-  </div>
+  <div id="array"></div>
 
-  <div>
-    <span id="plot"></span>
-  </div>
+  <div id="newArray"></div>
 
+  <div id="chartContainer" style="height: 40%; width: 70%;"></div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
   <script type="text/javascript">
 
   document.getElementById("plotButton").disabled = true;
   var numbers = [];
   var numbers2 = [];
-
 
   function generate() {
     numbers = [];
@@ -48,28 +38,47 @@
     for (var i = 1; i < 11; i++) {
       numbers2.push(getOccurrence(numbers,i));
     }
-    document.getElementById("array").innerHTML = numbers;
-    document.getElementById("newArray").innerHTML = numbers2;
-    document.getElementById("plotButton").disabled = false;
+    document.getElementById("array").innerHTML = "Array: " + numbers;
+    document.getElementById("newArray").innerHTML = "Frequency Array: " + numbers2;
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+
+      title:{
+        text:"Frequency of Random Numbers"
+      },
+      axisX:{
+        interval: 1
+      },
+      axisY2:{
+        interlacedColor: "rgba(1,77,101,.2)",
+        gridColor: "rgba(1,77,101,.1)",
+        title: "Number of Occurrences"
+      },
+      data: [{
+        type: "bar",
+        name: "companies",
+        axisYType: "secondary",
+        color: "#014D65",
+        dataPoints: [
+          { y: numbers2[9], label: "10"},
+          { y: numbers2[8], label: "9"},
+          { y: numbers2[7], label: "8"},
+          { y: numbers2[6], label: "7"},
+          { y: numbers2[5], label: "6"},
+          { y: numbers2[4], label: "5"},
+          { y: numbers2[3], label: "4"},
+          { y: numbers2[2], label: "3"},
+          { y: numbers2[1], label: "2"},
+          { y: numbers2[0], label: "1"},
+        ]
+      }]
+    });
+    document.getElementById("plot").innerHTML = chart.render();
   }
 
   function getOccurrence(array, value) {
     return array.filter((v) => (v === value)).length;
-  }
-
-  function generatePlot() {
-    var plotString = "";
-    for (var i = 0; i < numbers2.length; i++) {
-      plotString += "Value " + (i+1) + ": ";
-
-      for(var j = 0; j<numbers2[i]; j++) {
-        plotString += "* ";
-      }
-
-      plotString += "<br>"
-    }
-
-    document.getElementById("plot").innerHTML = plotString;
   }
 
 </script>
